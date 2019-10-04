@@ -9,7 +9,7 @@ function onReady () {
 
 function addNew () {
     const addFirstName = $('submitFirstName').val();
-    $('#submitFirstName').append('')
-    console.log ('adding new First Name');
+    console.log ($('#submitFirstName').val());
 
+    //const addLastName = $('submitLastName').val();
 }
