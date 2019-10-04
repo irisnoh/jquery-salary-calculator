@@ -8,12 +8,12 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
 
-- create a `html`, `js`, `jQuery` page and source in to HTML.
-- title page "Salary Calculator" in html
-    - create header for "Add Employee" in html
-        - create inputs for "first name", "last name", "ID", "title", and "annual salary" in html
-    - create another header for "Employees" in html
-        - create a submit button in html
+[x]- create a `html`, `js`, `jQuery` page and source in to HTML.
+[x]- title page "Salary Calculator" in html
+  [x]  - create header for "Add Employee" in html
+      [x]  - create inputs for "first name", "last name", "ID", "title", and "annual salary" in html
+    [x]- create another header for "Employees" in html
+        [x]- create a submit button in html
             - create a function that inputs new information into the table
 - create a table with "first name", "last name", "ID", "title", and "annual salary" in html
     - hard-code information into table in html
@@ -23,7 +23,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/gi
     - create a function that totals all the salary in the chart
 - add some css style at the end!
 
-
+- annual salary should be a $
 
 The application should have an input form that collects employee first name, last name, ID number, job title, annual salary.
 
