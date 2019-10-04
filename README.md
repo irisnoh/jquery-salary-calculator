@@ -14,7 +14,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/gi
       [x]  - create inputs for "first name", "last name", "ID", "title", and "annual salary" in html
     [x]- create another header for "Employees" in html
         [x]- create a submit button in html
-            - create a function that inputs new information into the table
+           [x] - create a function that inputs new information into the table
 [x]- create a table with "first name", "last name", "ID", "title", and "annual salary" in html
     [x]- hard-code information into table in html
     [x]- create a "delete" button in html
