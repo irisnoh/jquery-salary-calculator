@@ -2,17 +2,19 @@ console.log('in js');
 
 $(document).ready(onReady);
 
+let testCounter = 10000; 
 
-function onReady () {
-    console.log ('in jquery!');
+function onReady() {
+    console.log('in jquery!');
     $('#submitButton').on('click', addNew)
     $('tbody').on('click', '.deleteButton', deleteRow)
-    //$('.').on('click', totalSalary)
+    $('#totalMonthly').text(testCounter)
+    //$('#submitButton').on('click', totalTotal)
 }
 
-function addNew () {
+function addNew() {
     const addFirstName = $('#submitFirstName').val();
-    console.log ($('#submitFirstName').val());
+    console.log($('#submitFirstName').val());
 
     const addLastName = $('#submitLastName').val();
 
@@ -41,19 +43,13 @@ function addNew () {
 
 }
 
-function deleteRow (){
-    $(this).closest('tr').remove ()
-    console.log( 'this was deleted')
+function deleteRow() {
+    $(this).closest('tr').remove()
+    console.log('this was deleted')
 }
 
-function totalSalary () {
-    console.log ('this will add');
-    $(`.totalMonthly`).text(testTotal++);
+function totalSalary() {
+    console.log('this will add');
+    $(`.totalMonthly`).text(testCounter++);
+
 }
-
-let testTotal = 4;
-let testTotal2 = 4;
-
-let totalTotal = testTotal + testTotal2
-
-console.log (totalTotal);
