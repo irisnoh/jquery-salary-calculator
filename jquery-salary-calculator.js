@@ -8,8 +8,7 @@ function onReady() {
     $('tbody').on('click', '.deleteButton', deleteRow)
     $('#totalMonthly').text(totalMonthlySalary)
 }
-
-function totalMonthlySalary() {
+/*function totalMonthlySalary() {
     let totals = [0];
     console.log('is this totaling?');
     var dataRows = $("#countSalary");
@@ -27,7 +26,8 @@ console.log (tb);
         $(this).text(Number.totals[i]);
     });
 
-};
+}; */
+
 function addNew() {
     const addFirstName = $('#submitFirstName').val();
     console.log($('#submitFirstName').val());

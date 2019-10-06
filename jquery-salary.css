@@ -1,19 +1,26 @@
-  
-  #totalIt {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  table {
+table {
+    float: center;
     border-collapse: collapse;
     border-spacing: 0;
-  }
+    display: flex;
+    justify-content: center;
+   
+}
 th {
     background-color: lightpink;
     color: white;
-  }
-  tr:nth-child(even) {background-color: #f2f2f2;}
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
+body {
+    float: center;
+        background-image: linear-gradient(-90deg, lightblue, lightgreen);
+
+
+}
+#submitButton:hover {
+    background-color: lightskyblue;
+    color: white;
+  }
