@@ -2,17 +2,31 @@ console.log('in js');
 
 $(document).ready(onReady);
 
+let employeeObject = [
+    {
+        firstName: '',
+        lastName: '',
+        id: '',
+        title: '',
+        annualSalary: '',
+    }
+];
+
 function onReady() {
     console.log('in jquery!');
     $('#submitButton').on('click', addNew)
     $('tbody').on('click', '.deleteButton', deleteRow)
     $('#totalMonthly').text(totalMonthlySalary)
 }
+
+function addingEmployees () {
+
+}
 /*function totalMonthlySalary() {
     let totals = [0];
     console.log('is this totaling?');
     var dataRows = $("#countSalary");
-    var ts = $("#countMe");
+    var ts = $("#countMe"); //need this to be a number not an object
     var tb = parseInt(ts)
     console.log(typeof tb);
 console.log (tb);
@@ -28,21 +42,25 @@ console.log (tb);
 
 }; */
 
+
+
+//need to make this an array?
 function addNew() {
-    const addFirstName = $('#submitFirstName').val();
+    console.log('in addNew');
+    //const addFirstName = $('#submitFirstName').val();
     console.log($('#submitFirstName').val());
 
-    const addLastName = $('#submitLastName').val();
+    //const addLastName = $('#submitLastName').val();
 
     console.log($('#submitLastName').val());
 
-    const addId = $('#submitId').val();
+   //const addId = $('#submitId').val();
     console.log($('#submitId').val());
 
-    const addTitle = $('#submitTitle').val();
+    //const addTitle = $('#submitTitle').val();
     console.log($('#submitTitle').val());
 
-    const addAnnualSalary = $('#submitAnnualSalary').val();
+    //const addAnnualSalary = $('#submitAnnualSalary').val();
     console.log($('#submitAnnualSalary').val());
 
     $(`tbody`).append(`
