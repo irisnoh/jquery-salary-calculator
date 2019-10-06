@@ -40,6 +40,8 @@ function addNew() {
                 <td>
         <button class="deleteButton"> Delete </button> </td>
             </tr>`);
+    $('.inputs').val('');
+    totalMonthlySalary();
 
 }
 
@@ -56,7 +58,7 @@ function totalMonthlySalary() {
     };
 
     let months = 12;
-    let monthlySalary = Number(totalYearlySalary) / Number (months);
+    let monthlySalary = Number(totalYearlySalary) / Number(months);
 
 
     $('#totalMonthly').text(monthlySalary);
