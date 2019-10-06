@@ -50,8 +50,15 @@ function deleteRow() {
 
 function totalMonthlySalary() {
     let totalYearlySalary = 0;
-
-    for (let i = 0; i < employeeObject.length; i++)
+    for (let i = 0; i < employeeObject.length; i++) {
         console.log('is this totaling?');
-$('#totalMonthly').text('display total');
-};
+        totalYearlySalary += Number(employeeObject[i].annualSalary);
+    };
+
+    let months = 12;
+    let monthlySalary = Number(totalYearlySalary) / Number (months);
+
+
+    $('#totalMonthly').text(monthlySalary);
+
+}
