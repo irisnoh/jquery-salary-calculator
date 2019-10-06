@@ -36,7 +36,7 @@ function addNew() {
                 <td>` + newEmployeeObject.lastName + `</td>
                 <td>` + newEmployeeObject.id + `</td>
                 <td>` + newEmployeeObject.title + `</td>
-                <td>` + newEmployeeObject.annualSalary + `</td>
+                <td>` + dollarSign.format(newEmployeeObject.annualSalary)+ `</td>
                 <td>
         <button class="deleteButton"> Delete </button> </td>
             </tr>`);
@@ -56,7 +56,7 @@ function totalMonthlySalary() {
     let monthlySalary = Number(totalYearlySalary) / Number(months);
 
 
-    $('#totalMonthly').text(monthlySalary);
+    $('#totalMonthly').text(dollarSign.format(monthlySalary));
     checkMonthlySalary();
 
 function checkMonthlySalary() {
@@ -72,7 +72,15 @@ function checkMonthlySalary() {
 }
 
 
-function deleteRow() {
+function deleteRow() { 
     $(this).closest('tr').remove()
     console.log('this was deleted');
 }
+
+const dollarSign = new Intl.NumberFormat ('en-US', {
+    style: 'currency',
+    currency: 'USD', 
+    minimumFractionDigits: 2
+})
+
+
