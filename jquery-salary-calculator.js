@@ -20,7 +20,7 @@ function onReady() {
 }
 //need to make this an array?
 function addNew() {
-console.log ('in my addNew');
+    console.log('in my addNew');
     let newEmployeeObject = {
         firstName: $('#submitFirstName').val(),
         lastName: $('#submitLastName').val(),
@@ -29,20 +29,19 @@ console.log ('in my addNew');
         annualSalary: $('#submitAnnualSalary').val()
 
     }
-employeeObject.push(newEmployeeObject);
+    employeeObject.push(newEmployeeObject);
     $(`tbody`).append(`
         <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+                <td>` + newEmployeeObject.firstName + `</td>
+                <td>` + newEmployeeObject.lastName + `</td>
+                <td>` + newEmployeeObject.id + `</td>
+                <td>` + newEmployeeObject.title + `</td>
+                <td>` + newEmployeeObject.annualSalary + `</td>
                 <td>
-                    <button class="deleteButton"> Delete </button>
-                </td>
+        <button class="deleteButton"> Delete </button> </td>
             </tr>`);
 
-} 
+}
 
 function deleteRow() {
     $(this).closest('tr').remove()
