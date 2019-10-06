@@ -45,12 +45,7 @@ function addNew() {
 
 }
 
-function deleteRow() {
-    $(this).closest('tr').remove()
-    console.log('this was deleted');
-}
-
-function totalMonthlySalary() {
+function totalMonthlySalary() { 
     let totalYearlySalary = 0;
     for (let i = 0; i < employeeObject.length; i++) {
         console.log('is this totaling?');
@@ -62,5 +57,22 @@ function totalMonthlySalary() {
 
 
     $('#totalMonthly').text(monthlySalary);
+    checkMonthlySalary();
 
+function checkMonthlySalary() {
+    console.log('checking Red');
+    if (monthlySalary < 20000) {
+        $('#totalMonthly').removeClass('red');
+        return true;
+    } else {
+        $('#totalMonthly').addClass('red');
+        return false;
+    }
+}
+}
+
+
+function deleteRow() {
+    $(this).closest('tr').remove()
+    console.log('this was deleted');
 }
