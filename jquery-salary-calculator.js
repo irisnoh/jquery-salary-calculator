@@ -16,7 +16,7 @@ function onReady() {
     console.log('in jquery!');
     $('#submitButton').on('click', addNew)
     $('tbody').on('click', '.deleteButton', deleteRow)
-    //('#totalMonthly').text(totalMonthlySalary)
+    $('#totalMonthly').text(totalMonthlySalary)
 }
 //need to make this an array?
 function addNew() {
@@ -48,22 +48,10 @@ function deleteRow() {
     console.log('this was deleted');
 }
 
-/*function totalMonthlySalary() {
-    let totals = [0];
-    console.log('is this totaling?');
-    var dataRows = $("#countSalary");
-    var ts = $("#countMe"); //need this to be a number not an object
-    var tb = parseInt(ts)
-    console.log(typeof tb);
-console.log (tb);
-    dataRows.each(function () {
-        console.log('its not working ruth');
-        $(this).find(tb.each(function (i) {
-            totals[i] += parseInt($(this).text());
-        }));
-    });
-    $("#totalMonthly").each(function (i) {
-        $(this).text(Number.totals[i]);
-    });
+function totalMonthlySalary() {
+    let totalYearlySalary = 0;
 
-};*/
+    for (let i = 0; i < employeeObject.length; i++)
+        console.log('is this totaling?');
+$('#totalMonthly').text('display total');
+};
