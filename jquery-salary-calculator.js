@@ -8,21 +8,23 @@ function onReady() {
     $('tbody').on('click', '.deleteButton', deleteRow)
     $('#totalMonthly').text(totalMonthlySalary)
 }
-var totals = [0];
 
 function totalMonthlySalary() {
-
-console.log ('is this totaling?');
-    var dataRows = $("#totalIt");
+    let totals = [0];
+    console.log('is this totaling?');
+    var dataRows = $("#countSalary");
+    var ts = $("#countMe");
+    var tb = parseInt(ts)
+    console.log(typeof tb);
+console.log (tb);
     dataRows.each(function () {
-        console.log ('its not working ruth');
-        $(this).find('#countSalary').each(function (i) {
-            totals[i] += parseInt($(this).html());
-        });
+        console.log('its not working ruth');
+        $(this).find(tb.each(function (i) {
+            totals[i] += parseInt($(this).text());
+        }));
     });
     $("#totalMonthly").each(function (i) {
-        $(this).text(totals[i]);
-        console.log ('IS IT WORKING');
+        $(this).text(Number.totals[i]);
     });
 
 };
