@@ -2,16 +2,30 @@ console.log('in js');
 
 $(document).ready(onReady);
 
-let testCounter = 10000; 
-
 function onReady() {
     console.log('in jquery!');
     $('#submitButton').on('click', addNew)
     $('tbody').on('click', '.deleteButton', deleteRow)
-    $('#totalMonthly').text(testCounter)
-    //$('#submitButton').on('click', totalTotal)
+    $('#totalMonthly').text(totalMonthlySalary)
 }
+var totals = [0];
 
+function totalMonthlySalary() {
+
+console.log ('is this totaling?');
+    var dataRows = $("#totalIt");
+    dataRows.each(function () {
+        console.log ('its not working ruth');
+        $(this).find('#countSalary').each(function (i) {
+            totals[i] += parseInt($(this).html());
+        });
+    });
+    $("#totalMonthly").each(function (i) {
+        $(this).text(totals[i]);
+        console.log ('IS IT WORKING');
+    });
+
+};
 function addNew() {
     const addFirstName = $('#submitFirstName').val();
     console.log($('#submitFirstName').val());
@@ -45,11 +59,5 @@ function addNew() {
 
 function deleteRow() {
     $(this).closest('tr').remove()
-    console.log('this was deleted')
-}
-
-function totalSalary() {
-    console.log('this will add');
-    $(`.totalMonthly`).text(testCounter++);
-
+    console.log('this was deleted');
 }
