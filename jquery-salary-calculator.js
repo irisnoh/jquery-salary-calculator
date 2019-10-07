@@ -18,7 +18,7 @@ function onReady() {
     $('tbody').on('click', '.deleteButton', deleteRow)
     $('#totalMonthly').text(totalMonthlySalary)
 }
-//need to make this an array?
+// add inputs to append to table
 function addNew() {
     console.log('in my addNew');
     let newEmployeeObject = {
@@ -44,7 +44,7 @@ function addNew() {
     totalMonthlySalary();
 
 }
-
+// calculates monthly salary and to display total
 function totalMonthlySalary() { 
     let totalYearlySalary = 0;
     for (let i = 0; i < employeeObject.length; i++) {
@@ -71,7 +71,7 @@ function checkMonthlySalary() {
 }
 }
 
-
+// deletes whole row
 function deleteRow() { 
     $(this).closest('tr').remove()
     console.log('this was deleted');
