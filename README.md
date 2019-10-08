@@ -46,3 +46,5 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/gi
 
 Files Provided
 No files have been provided. Fork and clone this repository or create a new GitHub repository to get started. Make sure to commit regularily!
+
+![image](jquery-salary-image.png)
