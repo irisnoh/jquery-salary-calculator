@@ -69,46 +69,8 @@ function totalMonthlySalary() {
 function deleteRow() {
         $(this).closest('tr').remove()
         console.log('this was deleted');
-        /*
-    let employeeId = $(this).parent().prev().prev().prev().text();
-     console.log(employeeId);
-     let updatedEmployeeArray = [];
-     employeeObject.forEach(function (employee) {
-         if (employee.employeeId !== employeeId) {
-             updatedEmployeeArray.push(employee);
-         }
-     });
-     //$(this).closest('tr').remove()
-     console.log('this was deleted');
-     employeeObject = updatedEmployeeArray;
-     // display all employees
-     //update total
-    // renderEmployeeList();
-     totalMonthlySalary();*/
-
 }
-
-/*
-function deleteEmployee() {
-    console.log('delete button has been clicked');
-    let employeeId = $(this).parent().prev().prev().prev().text();
-    console.log(employeeId);
-    // remove employee
-    let updatedEmployeeArray = [];
-    employeeObject.forEach(function (employee) {
-        if (newEmployeeObject.id !== employeeId) {
-            updatedEmployeeArray.push(employee);
-        }
-    });
-    employeeObject = updatedEmployeeArray;
-    // display all employees
-    addNew();
-    // update total
-    updateMonthlyTotal();
-}*/
-
-
-
+// formating for $
 const dollarSign = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
